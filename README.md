@@ -105,13 +105,13 @@ https://sqlitebrowser.org/)
 
 - Configure the same application according to RDS MYSQL database rather than SQLite
 
-- Check the documentation for environment variable
+- Check the documentation for environment variable:
 
 https://flask-mysqldb.readthedocs.io/en/latest/
 
-- commit your code and push it to your GitHub repo
+- commit your code and push it to your GitHub repo.
 
-- Launch an Instance and pull your files in to it
+- Launch an Instance and pull your files in to it.
 
 
 ## Part 3 - Install Python and Flask framework on Amazon Linux 2023 EC2 Instance 
@@ -133,6 +133,6 @@ https://flask-mysqldb.readthedocs.io/en/latest/
 - If its not working with error code "cannot import name '_request_ctx_stack' from 'flask'", 
   'pip install Flask==2.3.3`
 
-- Run application with Python
+- Run application with Python.
 
 
