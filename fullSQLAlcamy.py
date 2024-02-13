@@ -7,17 +7,17 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./email.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-# Create table with class
+# Create table with class:
 class User(db.Model):
     __tablename__ = 'users'
     username = db.Column(db.String(50), primary_key=True)
     email = db.Column(db.String(50))
 
-# Create database
+# Create database:
 with app.app_context():
     db.create_all()
 
-# Clean the old values
+# Clean the old values:
 
     db.session.query(User).delete()
     db.session.commit()
@@ -89,7 +89,7 @@ def add_email():
             return render_template('add-email.html', show_result=False)
 
 
-# - Add a statement to run the Flask application which can be reached from any host on port 80.
+# - Add a statement to run the Flask application which can be reached from any host on port 80:
 if __name__=='__main__':
     app.run(debug=True)
     #app.run(host='0.0.0.0', port=8080)
