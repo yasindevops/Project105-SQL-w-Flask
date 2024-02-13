@@ -26,36 +26,36 @@ At the end of the this hands-on training, students will be able to;
 
 ## Students are expected to 
 
-- Examine and run the `app-with-sqlite.py` 
+- Examine and run the `app-with-sqlite.py` .
 
 - Create `app-with-mysql.py` at same folder and  configure the same application according to RDS MYSQL database. 
 
 ## Outline
 
-- Part 1 - Run the  Sample Web Application with SQLite and database implementation
+- Part 1 - Run the  Sample Web Application with SQLite and database implementation.
 
-- Part 2 - Write same application with MySQL
+- Part 2 - Write same application with MySQL.
 
-- Part 3 - Install Python and Flask framework on Amazon Linux 2023 EC2 Instance using RDS
+- Part 3 - Install Python and Flask framework on Amazon Linux 2023 EC2 Instance using RDS.
 
 
 ## Part 1 - Examine and Run the Sample Web Application with SQLite and database implementation in your Local
 
-- Examine which module are imported for this project 
+- Examine which module are imported for this project. 
 
-- Examine the anatomy of the `Database` configuration of `app-with-sqlite.py`
+- Examine the anatomy of the `Database` configuration of `app-with-sqlite.py`.
 
 ```
-- It adds required environmental variables for SQLite  according to documentation    
+- It adds required environmental variables for SQLite  according to documentation:    
    https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/
 
-- It drops users table if exists, creates new users table and adds some rows for sample
+- It drops users table if exists, creates new users table and adds some rows for sample.
 
-- It Executes sql commands to  commit data to tables
+- It Executes sql commands to  commit data to tables.
 
 ```
 
-- Examine the anatomy of the `Functions`  determined in `app-with-sqlite.py`
+- Examine the anatomy of the `Functions`  determined in `app-with-sqlite.py`.
 
 ```
 - Function named `find_emails` which find emails using keyword from the user table in the db,
@@ -64,12 +64,12 @@ At the end of the this hands-on training, students will be able to;
 - Function named `insert_email` which adds new email to users table the db.
 ```
 
-- Examine the anatomy of  the `Decorators `  determined in `app-with-sqlite.py`
+- Examine the anatomy of  the `Decorators `  determined in `app-with-sqlite.py`.
 
 ```
 - Function named `emails`  finds email addresses by keyword using `GET` and `POST` methods,
 uses template files named `emails.html` given under `templates` folder
-and it assigns to the static route of ('/')
+and it assigns to the static route of ('/').
 
 - Function named `add_email` inserts new email to the database using `GET` and `POST` methods,
 uses template files named `add-email.html` given under `templates` folder and  it assign to the static route of ('add')
@@ -77,9 +77,9 @@ uses template files named `add-email.html` given under `templates` folder and  i
 - The Flask application  can be reached from any host on port 8080.
 ```
 
-- Be sure that you install `flask-mysql, sqlalchemy, Flask-SQLAlchemy` via  `sudo pip3 install `
+- Be sure that you install `flask-mysql, sqlalchemy, Flask-SQLAlchemy` via  `sudo pip3 install `.
 
-- Run the  application `app-with-sqlite.py` 
+- Run the  application `app-with-sqlite.py`. 
 
 - Check the database tables via SQLite Browser ( You can download the SQLite Browser from the link : 
 https://sqlitebrowser.org/)
@@ -101,9 +101,9 @@ https://sqlitebrowser.org/)
 -Initial DB name        : clarusway
 
 ```
-- Create `app-with-mysql.py` the  same folder near the `app-with-sqlite.py` 
+- Create `app-with-mysql.py` the  same folder near the `app-with-sqlite.py`. 
 
-- Configure the same application according to RDS MYSQL database rather than SQLite
+- Configure the same application according to RDS MYSQL database rather than SQLite.
 
 - Check the documentation for environment variable:
 
@@ -124,7 +124,7 @@ https://flask-mysqldb.readthedocs.io/en/latest/
 
 - Install `Python 3` and `pip3` packages.
 
-- Check the python3  and `pip3` version
+- Check the python3  and `pip3` version.
 
 - Install `Python 3 Flask` framework.
 
