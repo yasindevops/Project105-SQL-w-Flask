@@ -1,12 +1,12 @@
-# Import Flask modules
+# Import Flask modules:
 from flask import Flask, render_template, request
 from flaskext.mysql import MySQL
 
 
-# Create an object named app
+# Create an object named app:
 app = Flask(__name__)
 
-# Configure mysql database
+# Configure mysql database:
 app.config['MYSQL_DATABASE_HOST'] = 'ysn-flask-05.cm6sdmw70sor.us-east-1.rds.amazonaws.com'
 app.config['MYSQL_DATABASE_USER'] = 'admin'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'Clarusway_1'
@@ -20,7 +20,7 @@ cursor = connection.cursor()
 
 # Create users table within MySQL db and populate with sample data
 # Execute the code below only once.
-# Write sql code for initializing users table..
+# Write sql code for initializing users table:
 drop_table = 'DROP TABLE IF EXISTS users;'
 users_table = """
 CREATE TABLE users (
@@ -43,7 +43,7 @@ cursor.execute(users_table)
 cursor.execute(data)
 
 # Write a function named `find_emails` which find emails using keyword from the user table in the db,
-# and returns result as tuples `(name, email)`.
+# and returns result as tuples `(name, email)`:
 def find_emails(keyword):
     query = f"""
     SELECT * FROM users WHERE username like '%{keyword}%';
@@ -56,7 +56,7 @@ def find_emails(keyword):
         user_emails = [('Not found.', 'Not Found.')]
     return user_emails
 
-# Write a function named `insert_email` which adds new email to users table the db.
+# Write a function named `insert_email` which adds new email to users table the db:
 def insert_email(name, email):
     query = f"""
     SELECT * FROM users WHERE username like '{name}';
@@ -83,7 +83,7 @@ def insert_email(name, email):
 
 # Write a function named `emails` which finds email addresses by keyword using `GET` and `POST` methods,
 # using template files named `emails.html` given under `templates` folder
-# and assign to the static route of ('/')
+# and assign to the static route of ('/'):
 @app.route('/', methods=['GET', 'POST'])
 def emails():
     if request.method == 'POST':
@@ -95,7 +95,7 @@ def emails():
 
 # Write a function named `add_email` which inserts new email to the database using `GET` and `POST` methods,
 # using template files named `add-email.html` given under `templates` folder
-# and assign to the static route of ('add')
+# and assign to the static route of ('add'):
 @app.route('/add', methods=['GET', 'POST'])
 def add_email():
     if request.method == 'POST':
